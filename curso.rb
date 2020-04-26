@@ -3,16 +3,15 @@ require 'byebug'
 require_relative 'calculador_cr'
 require 'pry'
 
-class Aluno
+class Curso
   def initialize(key, value)
-    @matricula = key[:matricula]
-
+    @cod_curso = key[:cod_curso]
     @disciplinas = value
     exibe_cr
   end
 
   def exibe_cr
-    puts "#{@matricula} --- #{CalculadorCr.new(@disciplinas).cr_aluno}"
+    puts "#{@cod_curso} --- #{CalculadorCr.new(@disciplinas).cr_curso}"
+
   end
-  # Aluno.new("1", "2", "3", "4").mostrar
 end
