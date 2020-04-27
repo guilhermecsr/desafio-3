@@ -1,4 +1,3 @@
-require_relative 'disciplina'
 require 'byebug'
 require_relative 'calculador_cr'
 require 'pry'
@@ -6,13 +5,20 @@ require 'pry'
 class Aluno
   def initialize(key, value)
     @matricula = key[:matricula]
-
     @disciplinas = value
-    exibe_cr
   end
 
   def exibe_cr
     puts "#{@matricula} --- #{CalculadorCr.new(@disciplinas).cr_aluno}"
   end
-  # Aluno.new("1", "2", "3", "4").mostrar
+
+  def retorna_dados
+    hash = {}
+    hash[:matricula => @matricula] = CalculadorCr.new(@disciplinas).cr_aluno
+    hash
+  end
+
+  def exibe_media
+    hash = { @matricula => CalculadorCr.new(@disciplinas).cr_aluno}
+  end
 end
