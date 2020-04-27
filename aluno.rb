@@ -9,12 +9,12 @@ class Aluno
   end
 
   def exibe_cr
-    puts "#{@matricula} --- #{CalculadorCr.new(@disciplinas).cr_aluno}"
+    puts "#{@matricula} --- #{CalculadorCr.new(@disciplinas).calcula_cr}"
   end
 
   def retorna_dados
     hash = {}
-    hash[:matricula => @matricula] = CalculadorCr.new(@disciplinas).cr_aluno
+    hash[:matricula => @matricula] = CalculadorCr.new(@disciplinas).calcula_cr
     hash
   end
 end

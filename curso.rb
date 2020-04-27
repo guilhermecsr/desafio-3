@@ -9,7 +9,7 @@ class Curso
   end
 
   def exibe_cr
-    puts "#{@cod_curso} --- #{CalculadorCr.new(@disciplinas).cr_curso}"
+    puts "#{@cod_curso} --- #{CalculadorCr.new(@disciplinas).calcula_cr}"
 
   end
 
