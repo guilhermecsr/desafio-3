@@ -18,9 +18,4 @@ class Curso
     hash[:cod_curso => @cod_curso] = @disciplinas
     hash
   end
-
-  def exibe_media
-    # CalculadorCr.new(@disciplinas).media_cr_cursos
-    # puts "exibe media"
-  end
 end

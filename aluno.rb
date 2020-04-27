@@ -17,8 +17,4 @@ class Aluno
     hash[:matricula => @matricula] = CalculadorCr.new(@disciplinas).cr_aluno
     hash
   end
-
-  def exibe_media
-    hash = { @matricula => CalculadorCr.new(@disciplinas).cr_aluno}
-  end
 end
