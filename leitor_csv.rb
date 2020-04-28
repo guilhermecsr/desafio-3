@@ -4,12 +4,21 @@ require_relative 'curso'
 require 'pry'
 require_relative 'formatador_dados'
 =begin
-calsse para ler os dados do csv e cada metodo extrai a informacao necessaria
+classe para ler os dados do csv e cada metodo extrai a informacao necessaria
 para cada objetivo retornando um hash com os valores necessarios
 =end
 class LeitorCsv
+=begin
+este metodo le o arquivo e faz o parse do csv com os headers, indicando uma
+mensagem de erro em caso de arquivo nao encontrado
+=end
   def initialize
-    @arquivo = CSV.parse(File.read("notas.csv"), headers: true)
+    begin
+      @arquivo = CSV.parse(File.read("notas.csv"), headers: true)
+    rescue StandardError => e
+      puts "Erro: #{e}"
+      exit(1)
+    end
   end
 
   def le_dados_aluno
