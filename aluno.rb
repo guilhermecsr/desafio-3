@@ -1,7 +1,7 @@
 require 'byebug'
 require_relative 'calculador_cr'
 require 'pry'
-
+#classe para retornar os dados dos alunos e imprimir os valores
 class Aluno
   def initialize(key, value)
     @matricula = key[:matricula]

@@ -3,7 +3,10 @@ require_relative 'aluno'
 require_relative 'curso'
 require 'pry'
 require_relative 'formatador_dados'
-
+=begin
+calsse para ler os dados do csv e cada metodo extrai a informacao necessaria
+para cada objetivo retornando um hash com os valores necessarios
+=end
 class LeitorCsv
   def initialize
     @arquivo = CSV.parse(File.read("notas.csv"), headers: true)
